@@ -1,0 +1,3 @@
+#detetc_config.yaml
+camera_num: 2  #detection camera number
+angle_thr: 0.1 #angle threshold ,judge detection effective
