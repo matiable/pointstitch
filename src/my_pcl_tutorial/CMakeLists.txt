@@ -55,6 +55,7 @@ add_message_files(
   FILES
   AprilTagDetection.msg
   AprilTagDetectionArray.msg
+  qualityparameter.msg
 )
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -133,6 +134,9 @@ target_link_libraries(point_stitch_apriltag ${catkin_LIBRARIES})##将相关的�
 
 add_executable(calibration_quality src/calibration_quality.cpp)##将src中的文件添加成名字为example的可执行文件
 target_link_libraries(calibration_quality ${catkin_LIBRARIES})##将相关的库和可执行文件链接
+
+add_executable(calibration_apriltag src/calibration_apriltag.cpp)##将src中的文件添加成名字为example的可执行文件
+target_link_libraries(calibration_apriltag ${catkin_LIBRARIES})##将相关的库和可执行文件链接
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/my_pcl_tutorial.cpp
