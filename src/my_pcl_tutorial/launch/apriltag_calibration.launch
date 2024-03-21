@@ -1,0 +1,10 @@
+<launch>
+	<group ns="camera_1">
+        <param name="camera_num" value="1" />
+        <node pkg="my_pcl_tutorial" type="calibration_apriltag" name="camera_1_apriltag" />
+    </group>
+	<group ns="camera_2">
+        <param name="camera_num" value="2" />
+        <node pkg="my_pcl_tutorial" type="calibration_apriltag" name="camera_2_apriltag" />
+    </group>
+</launch>
