@@ -1,0 +1,2 @@
+int32 success_flag
+int32 average_error
