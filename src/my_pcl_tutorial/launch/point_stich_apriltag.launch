@@ -1,0 +1,4 @@
+<launch>
+	<rosparam file="$(find my_pcl_tutorial)/config/transform.yaml" command="load" />
+	<node name="point_stitch_Apriltag" pkg="my_pcl_tutorial" type="point_stitch_apriltag" output="screen" />
+</launch>

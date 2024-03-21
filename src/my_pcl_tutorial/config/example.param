@@ -1,0 +1,414 @@
+T_0:
+- 0.13400886952877045
+- -0.21817345917224884
+- -0.9666653871536255
+- 0.0
+- -0.8390320539474487
+- -0.5440434813499451
+- 0.006473924033343792
+- 0.0
+- -0.5273204445838928
+- 0.8101956844329834
+- -0.25596117973327637
+- 0.0
+- 0.0397670641541481
+- -0.270730197429657
+- 0.11895140260457993
+- 1.0
+T_1:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+T_2:
+- -0.13965485990047455
+- -0.23912492394447327
+- -0.9608932137489319
+- 0.0
+- -0.8493356704711914
+- 0.5277939438819885
+- -0.007903936319053173
+- 0.0
+- 0.5090436935424805
+- 0.81501704454422
+- -0.2768063247203827
+- 0.0
+- -0.03637850284576416
+- -0.2766491770744324
+- 0.12540070712566376
+- 1.0
+T_3:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+T_4:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+camera_1:
+  apriltag_ros_continuous_node:
+    max_hamming_dist: 2
+    publish_tag_detections_image: true
+    publish_tf: true
+    queue_size: 1
+    standalone_tags:
+    - id: 1
+      name: tag1
+      size: 0.1
+    tag_blur: 0.0
+    tag_bundles:
+    - layout:
+      - id: 1
+        qw: 1
+        qx: 0
+        qy: 0
+        qz: 0
+        size: 0.1
+        x: 0
+        y: 0
+        z: 0
+      name: tag
+    tag_debug: 0
+    tag_decimate: 1.0
+    tag_family: tag36h11
+    tag_refine_edges: 1
+    tag_threads: 2
+    transport_hint: raw
+  tag_detections_image:
+    compressed:
+      format: jpeg
+      jpeg_optimize: false
+      jpeg_progressive: false
+      jpeg_quality: 80
+      jpeg_restart_interval: 0
+      png_level: 9
+    compressedDepth:
+      depth_max: 10.0
+      depth_quantization: 100.0
+      format: png
+      png_level: 9
+    theora:
+      keyframe_frequency: 64
+      optimize_for: 1
+      quality: 31
+      target_bitrate: 800000
+camera_2:
+  apriltag_ros_continuous_node:
+    max_hamming_dist: 2
+    publish_tag_detections_image: true
+    publish_tf: true
+    queue_size: 1
+    standalone_tags:
+    - id: 1
+      name: tag1
+      size: 0.1
+    tag_blur: 0.0
+    tag_bundles:
+    - layout:
+      - id: 1
+        qw: 1
+        qx: 0
+        qy: 0
+        qz: 0
+        size: 0.1
+        x: 0
+        y: 0
+        z: 0
+      name: tag
+    tag_debug: 0
+    tag_decimate: 1.0
+    tag_family: tag36h11
+    tag_refine_edges: 1
+    tag_threads: 2
+    transport_hint: raw
+  tag_detections_image:
+    compressed:
+      format: jpeg
+      jpeg_optimize: false
+      jpeg_progressive: false
+      jpeg_quality: 80
+      jpeg_restart_interval: 0
+      png_level: 9
+    compressedDepth:
+      depth_max: 10.0
+      depth_quantization: 100.0
+      format: png
+      png_level: 9
+    theora:
+      keyframe_frequency: 64
+      optimize_for: 1
+      quality: 31
+      target_bitrate: 800000
+camera_3:
+  apriltag_ros_continuous_node:
+    max_hamming_dist: 2
+    publish_tag_detections_image: true
+    publish_tf: true
+    queue_size: 1
+    standalone_tags:
+    - id: 1
+      name: tag1
+      size: 0.1
+    tag_blur: 0.0
+    tag_bundles:
+    - layout:
+      - id: 1
+        qw: 1
+        qx: 0
+        qy: 0
+        qz: 0
+        size: 0.1
+        x: 0
+        y: 0
+        z: 0
+      name: tag
+    tag_debug: 0
+    tag_decimate: 1.0
+    tag_family: tag36h11
+    tag_refine_edges: 1
+    tag_threads: 2
+    transport_hint: raw
+  tag_detections_image:
+    compressed:
+      format: jpeg
+      jpeg_optimize: false
+      jpeg_progressive: false
+      jpeg_quality: 80
+      jpeg_restart_interval: 0
+      png_level: 9
+    compressedDepth:
+      depth_max: 10.0
+      depth_quantization: 100.0
+      format: png
+      png_level: 9
+    theora:
+      keyframe_frequency: 64
+      optimize_for: 1
+      quality: 31
+      target_bitrate: 800000
+nebula_1:
+  mtof_depth:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  mtof_rgb:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  nebula_ros_driver:
+    boot_order: 1
+    depth_enable: true
+    device_numbers: 3
+    exposure_enable: false
+    exposure_time: 1000
+    ir_enable: true
+    ir_fps: 15
+    log_dir: /tmp/
+    mtof_ae_mode: 0
+    mtof_filter_level: 1
+    point_cloud_enable: true
+    resolution_mode_index: 0
+    rgb_enable: true
+    rgbd_enable: true
+    serial_number: ''
+    slam_mode: 1
+    stof_filter_level: 1
+    stream_sdk_log_enable: true
+    usb_port_number: 3-1.1
+nebula_2:
+  mtof_depth:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  mtof_rgb:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  nebula_ros_driver:
+    boot_order: 2
+    depth_enable: true
+    device_numbers: 3
+    exposure_enable: false
+    exposure_time: 1000
+    ir_enable: true
+    ir_fps: 15
+    log_dir: /tmp/
+    mtof_ae_mode: 0
+    mtof_filter_level: 1
+    point_cloud_enable: true
+    resolution_mode_index: 0
+    rgb_enable: true
+    rgbd_enable: true
+    serial_number: ''
+    slam_mode: 1
+    stof_filter_level: 1
+    stream_sdk_log_enable: true
+    usb_port_number: 3-1.2
+nebula_3:
+  mtof_depth:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  mtof_rgb:
+    image_raw:
+      compressed:
+        format: jpeg
+        jpeg_optimize: false
+        jpeg_progressive: false
+        jpeg_quality: 80
+        jpeg_restart_interval: 0
+        png_level: 9
+      compressedDepth:
+        depth_max: 10.0
+        depth_quantization: 100.0
+        format: png
+        png_level: 9
+      theora:
+        keyframe_frequency: 64
+        optimize_for: 1
+        quality: 31
+        target_bitrate: 800000
+  nebula_ros_driver:
+    boot_order: 3
+    depth_enable: true
+    device_numbers: 3
+    exposure_enable: false
+    exposure_time: 1000
+    ir_enable: true
+    ir_fps: 15
+    log_dir: /tmp/
+    mtof_ae_mode: 0
+    mtof_filter_level: 1
+    point_cloud_enable: true
+    resolution_mode_index: 0
+    rgb_enable: true
+    rgbd_enable: true
+    serial_number: ''
+    slam_mode: 1
+    stof_filter_level: 1
+    stream_sdk_log_enable: true
+    usb_port_number: 3-1.4
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_firefly__37783: http://firefly:37783/
+    host_firefly__38723: http://firefly:38723/
+rosversion: '1.16.0
+
+  '
+run_id: e0d547c4-cec9-11ee-aadf-ced4a954d965
