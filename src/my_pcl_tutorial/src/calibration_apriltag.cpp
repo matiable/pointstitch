@@ -17,7 +17,6 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/common/transforms.h>
-#include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/filters/extract_indices.h>
@@ -57,7 +56,7 @@ Eigen::Isometry3d getFromAprilTagDetectionArray(const my_pcl_tutorial::AprilTagD
     Rt_ios.translate(rotatedPosition);
     Rt_ios.rotate(q_inverse);
     std::lock_guard<std::mutex> guard(t_mutex);
-    T[i-1] = Rt_ios.matrix().cast<float>();
+    T = Rt_ios.matrix().cast<float>();
     detect_seccess = true;
     return Rt_ios;
 }
@@ -101,12 +100,6 @@ void pointCloudCallback(const sensor_msgs::PointCloud2ConstPtr &pointcloud) {
     //第二种，就是分割制定法向量的点云
 }
 
-void caliberror_Callback(const my_pcl_tutorial/CalibrationQuality::ConstPtr& caliberror){
-    if(caliberror->success_flag){
-
-    }
-}
-
 int main(int argc, char **argv)
 {
 	ros::init(argc, argv, "calibration_apriltag"); // 声明节点的名称
@@ -117,7 +110,6 @@ int main(int argc, char **argv)
     std::string pointcloud_topic = "/camera_" + camera_num + "mtof_points2";
     std::string detect_topic = "/camera_" + camera_num + "/tag_detections";
 	ros::Subscriber detect_sub = nh.subscribe(detect_topic, 1000, tagDetection_Callback);
-    ros::Subscriber error_sub = nh.subscribe("/calib_error", 1000, caliberror_Callback);
     ros::Subscriber pointcloud_sub = nh.subscribe<sensor_msgs::PointCloud2>(pointcloud_topic, 10, pointCloudCallback);
 	ros::spin();
 }
