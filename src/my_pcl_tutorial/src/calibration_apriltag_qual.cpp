@@ -66,15 +66,17 @@ void cameraCallback(const my_pcl_tutorial::qualityparameter::ConstPtr& msg, cons
 }
 
 void angleerror(const int camera_index){
-    if(T.size()==3){
+    if(T.size()==2){
         int num = v_normal.size();
         int error = 0;
         for(int i = 0 ; i < num-1 ; i++){
             int angle = calculateAngle(v_normal[i],v_normal[i+1]);
+
+            //这里的refer_angle代表的是，相邻相机之间拍的tag的夹角
             error += angle - refer_angle;
         }
         error = error/(num-1);
-        if(error > 5.0){
+        if(error > 5.0){ //平均的误差角度如果大于某一个值，则判断本次评估失败
             ROS_WARN("the angle error of this calibration is %d", error);
         }
         else{
