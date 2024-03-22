@@ -25,11 +25,13 @@
 #include <pcl/visualization/cloud_viewer.h>
 
 #include <Eigen/Geometry>
+#include <Eigen/Dense>
 #include "geometry_msgs/PoseStamped.h"
 #include "my_pcl_tutorial/AprilTagDetection.h"
 #include "my_pcl_tutorial/AprilTagDetectionArray.h"
 #include "my_pcl_tutorial/qualityparameter.h"
 
+#include <yaml-cpp/yaml.h>
 #include <fstream>
 std::mutex t_mutex; // 保护v_normal的互斥锁
 std::unordered_map<int,std::vector<int>> v_normal;
@@ -78,8 +80,21 @@ void angleerror(const int camera_index){
         else{
             ROS_INFO("calibration success!");
             //将T中的camera_index数值写入参数文件
-
-
+            YAML::Emitter out;
+            out << YAML::BeginMap;
+            out << YAML::Key << "camera_id" << YAML::Value << camera_id;
+            out << YAML::Key << "camera_T" << YAML::Value << YAML::Flow;
+            out << YAML::BeginSeq;
+            for (int i = 0; i < 4; ++i) {
+                for (int j = 0; j < 4; ++j) {
+                    out << camera_T(i, j);
+                }
+            }
+            out << YAML::EndSeq;
+            out << YAML::EndMap;
+            // 将YAML数据写入文件
+            std::ofstream fout("parameters.yaml");
+            fout << out.c_str();
         }
     }
 }
