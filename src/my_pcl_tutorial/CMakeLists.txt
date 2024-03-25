@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_filters
   message_generation
   geometry_msgs
+  yaml-cpp
 )
 
 ## System dependencies are found with CMake's conventions
